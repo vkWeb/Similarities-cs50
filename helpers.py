@@ -26,11 +26,11 @@ def substrings(a, b, n):
     splittedB = set()
 
     while True:
-        if startIndex < len(a):
+        if startIndex + n <= len(a):
             splittedA.add(a[startIndex:(startIndex + n)])
-        if startIndex < len(b):
+        if startIndex + n <= len(b):
             splittedB.add(b[startIndex:(startIndex + n)])
-        if startIndex > len(a) and startIndex > len(b):
+        if startIndex + n > len(a) and startIndex + n > len(b):
             break
         startIndex = startIndex + 1
 
